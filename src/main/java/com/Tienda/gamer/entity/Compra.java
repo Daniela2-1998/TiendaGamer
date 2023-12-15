@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -18,6 +19,8 @@ public class Compra {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCompra;
 
+    private LocalDate fechaCompra;
+
     @OneToMany(mappedBy = "compra", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private List<Juego> juego;
 
@@ -26,5 +29,9 @@ public class Compra {
 
     @OneToOne(mappedBy = "compra", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private MedioDePago medioDePago;
+
+    @OneToOne(mappedBy = "compra", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    private Precio precio;
+
 
 }
