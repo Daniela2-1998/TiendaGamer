@@ -21,17 +21,21 @@ public class Compra {
 
     private LocalDate fechaCompra;
 
-    @OneToMany(mappedBy = "compra", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    private List<Juego> juego;
+    @OneToMany
+    @JoinColumn(name = "juego_id", nullable = false)
+    private List<Juego> juegos;
 
-    @OneToOne(mappedBy = "compra", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @OneToOne
+    @JoinColumn(name = "cliente_id", nullable = false)
     private Cliente cliente;
 
-    @OneToOne(mappedBy = "compra", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @OneToOne
+    @JoinColumn(name = "medio_de_pago_id", nullable = false)
     private MedioDePago medioDePago;
 
-    @OneToOne(mappedBy = "compra", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    private Precio precio;
+    //@OneToOne
+    //@JoinColumn(name = "precio_id", nullable = false)
+    //private Precio precio;
 
 
 }

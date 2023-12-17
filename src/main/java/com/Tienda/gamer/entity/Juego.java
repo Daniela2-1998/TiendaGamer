@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Data
@@ -21,11 +20,18 @@ public class Juego {
 
     private String titulo;
 
-    @OneToMany(mappedBy = "juego", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    private List<Plataforma> plataformas;
+    @OneToOne
+    @JoinColumn(name = "plataforma_id", nullable = false)
+    private Plataforma plataforma;
 
     private LocalDate lanzamiento;
 
     private Double stock;
+
+    private Double precio;
+
+    //@ManyToMany(mappedBy = "juego")
+    //private List<Compra> compras;
+
 
 }

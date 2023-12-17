@@ -10,14 +10,12 @@ public interface ICompraRepository extends JpaRepository<Compra,Long> {
 
     Compra findById (long id);
 
-    List<Compra> findByFechaVenta(LocalDate date);
+    List<Compra> findByFechaCompra(LocalDate date);
 
     List<Compra> findByCliente(Cliente cliente);
 
-    List<Compra> findByJuego(Juego juego);
+    List<Compra> findByJuegos(Juego juego);
 
     List<Compra> findByMedioDePago(MedioDePago medioDePago);
-
-    List<Compra> findByPrecio(Precio precio);
 
 }

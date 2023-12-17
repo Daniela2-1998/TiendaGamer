@@ -8,11 +8,13 @@ import java.util.List;
 
 public interface IClienteRepository  extends JpaRepository<Cliente,Long> {
 
-    Cliente findByNombreCompleto(String nombre, String apellido);
+    // MÉTODOS / Cada nombre representa y lleva el nombre de una variable declarada en Entity
+
+    Cliente findByNombreAndApellido(String nombre, String apellido);
 
     Cliente findByDni(String dni);
 
-    Cliente findByMAail(String mail);
+    Cliente findByMail(String mail);
 
     List<Cliente> findByFechaRegistro(LocalDate date);
 

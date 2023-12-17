@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "mediosDePago")
+@Table(name = "medios_de_pago")
 public class MedioDePago {
 
     @Id
@@ -20,7 +20,9 @@ public class MedioDePago {
 
     private String medio;
 
-    private List<Integer> cuotasDisponibles;
+    private int cuotasDisponibles;
 
+    //@OneToOne(mappedBy = "medioDePago")
+    //private Compra compra;
 
 }

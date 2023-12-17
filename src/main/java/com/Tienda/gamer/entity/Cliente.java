@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -13,6 +14,8 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Table(name = "clientes")
 public class Cliente {
+
+    // VARIABLES / Campos importantes llevan @JoinColumn
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +29,11 @@ public class Cliente {
 
     private String dni;
 
-    private LocalDate registro;
+    private LocalDate fechaRegistro;
+
+    @OneToMany
+    @JoinColumn(name = "compras_id", nullable = true)
+    private List<Compra> compras;
 
 
 }
