@@ -48,7 +48,7 @@ public class ClienteServiceImp implements IClienteService{
     public ClienteResponseDto obtenerClienteById(long id) {
         Optional<Cliente> cliente = clienteRepository.findById(id);
         if(cliente.isEmpty()){
-            throw new EntityNotFoundException("No hay clientes registrados");
+            throw new EntityNotFoundException("No hay clientes registrados con ese ID.");
         }
         return mapper.map(cliente, ClienteResponseDto.class);
     }
@@ -73,6 +73,7 @@ public class ClienteServiceImp implements IClienteService{
         return mapper.map(persistCliente, ClienteResponseDto.class);
     }
 
+    // MODIFICAR CLIENTE
     @Override
     public ClienteResponseDto editarCliente(ClienteConIdRequestDto clienteConIdRequestDto) {
         Cliente cliente = clienteRepository.findByDni(clienteConIdRequestDto.getDni());
@@ -91,6 +92,7 @@ public class ClienteServiceImp implements IClienteService{
         return mapper.map(persistCliente, ClienteResponseDto.class);
     }
 
+    // ELIMINAR CLIENTE
     @Override
     public MensajeResponseDto eliminarCliente(long id) {
         obtenerClienteById(id);

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PlataformaResponseDto {
 
-    private Long id;
+    private Long idPlataforma;
 
     private String nombre;
 

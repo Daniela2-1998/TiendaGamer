@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface IClienteService {
 
-    //   --------------------------------        CRUD        -----------------------------------------------------------
+    //   --------------------------------        CRUD        ----------------------------------------------------------
 
     List<ClienteResponseDto> obtenerClientes();
 

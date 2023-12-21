@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface IPlataformaRepository extends JpaRepository<Plataforma,Long> {
 
-    List<Plataforma> findByNombre(String nombre);
+    Plataforma findById(long id);
+
+    Plataforma findByNombre(String nombre);
 
 }

@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface IMedioDePagoRepository extends JpaRepository<MedioDePago,Long> {
 
+    MedioDePago findById(long id);
+
     MedioDePago findByMedio(String medio);
 
     MedioDePago findByCuotasDisponibles(int cuotasDisponibles);

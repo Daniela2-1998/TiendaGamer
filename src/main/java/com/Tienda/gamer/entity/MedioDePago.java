@@ -20,7 +20,7 @@ public class MedioDePago {
 
     private String medio;
 
-    private int cuotasDisponibles;
+    private Integer cuotasDisponibles;
 
     //@OneToOne(mappedBy = "medioDePago")
     //private Compra compra;

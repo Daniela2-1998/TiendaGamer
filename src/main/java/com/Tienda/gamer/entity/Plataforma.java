@@ -16,7 +16,7 @@ public class Plataforma {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idPlataforma;
 
     private String nombre;
 
