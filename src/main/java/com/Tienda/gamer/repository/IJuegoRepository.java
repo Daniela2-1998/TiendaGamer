@@ -11,13 +11,13 @@ public interface IJuegoRepository extends JpaRepository<Juego,Long> {
 
     Juego findById(long id);
 
-    List<Juego> findByTitulo(String titulo);
+    Juego findByTitulo(String titulo);
 
-    List<Juego> findByTituloAndPlataforma(String titulo, Plataforma plataforma);
+    Juego findByTituloAndPlataforma(String titulo, Plataforma plataforma);
 
     List<Juego> findByLanzamiento(LocalDate date);
 
-    Juego findByStock(double stock);
+    Juego findByStock(Integer stock);
 
     Juego findByPrecio(double precio);
 

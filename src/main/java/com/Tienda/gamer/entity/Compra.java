@@ -22,7 +22,7 @@ public class Compra {
     private LocalDate fechaCompra;
 
     @OneToMany
-    @JoinColumn(name = "juego_id", nullable = false)
+    //@JoinColumn(name = "juego_id", nullable = false)
     private List<Juego> juegos;
 
     @OneToOne
@@ -32,10 +32,6 @@ public class Compra {
     @OneToOne
     @JoinColumn(name = "medio_de_pago_id", nullable = false)
     private MedioDePago medioDePago;
-
-    //@OneToOne
-    //@JoinColumn(name = "precio_id", nullable = false)
-    //private Precio precio;
 
 
 }

@@ -22,7 +22,4 @@ public class MedioDePago {
 
     private Integer cuotasDisponibles;
 
-    //@OneToOne(mappedBy = "medioDePago")
-    //private Compra compra;
-
 }

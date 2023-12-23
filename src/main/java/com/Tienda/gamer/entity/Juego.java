@@ -21,17 +21,14 @@ public class Juego {
     private String titulo;
 
     @OneToOne
-    @JoinColumn(name = "plataforma_id", nullable = false)
+    @JoinColumn(name = "plataforma_id")
     private Plataforma plataforma;
 
     private LocalDate lanzamiento;
 
-    private Double stock;
+    private Integer stock;
 
     private Double precio;
-
-    //@ManyToMany(mappedBy = "juego")
-    //private List<Compra> compras;
 
 
 }
