@@ -8,10 +8,11 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 import java.util.List;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CompraSinClienteResponseDto {
+public class CompraSinMedioDePagoResponseDto {
 
     private Long idCompra;
 
@@ -19,7 +20,8 @@ public class CompraSinClienteResponseDto {
 
     private List<JuegoResponseDto> juegos;
 
-    private MedioDePago medioDePago;
+    private ClienteSinCompraResponseDto cliente;
+
 
 
 }

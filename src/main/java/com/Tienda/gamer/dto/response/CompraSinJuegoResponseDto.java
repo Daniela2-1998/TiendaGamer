@@ -6,20 +6,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CompraSinClienteResponseDto {
+public class CompraSinJuegoResponseDto {
 
     private Long idCompra;
 
     private LocalDate fechaCompra;
 
-    private List<JuegoResponseDto> juegos;
+    private ClienteSinCompraResponseDto cliente;
 
     private MedioDePago medioDePago;
-
-
 }

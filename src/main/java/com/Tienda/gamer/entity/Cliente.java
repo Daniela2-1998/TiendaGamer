@@ -31,8 +31,8 @@ public class Cliente {
 
     private LocalDate fechaRegistro;
 
-    @OneToMany
-    @JoinColumn(name = "compras_id", nullable = true)
+    @OneToMany(mappedBy = "cliente")
+    //@JoinColumn(name = "compras_id", nullable = true)
     private List<Compra> compras;
 
 

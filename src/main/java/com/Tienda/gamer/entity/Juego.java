@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,8 +21,8 @@ public class Juego {
 
     private String titulo;
 
-    @OneToOne
-    @JoinColumn(name = "plataforma_id")
+    @ManyToOne
+    //@JoinColumn(name = "plataforma_id")
     private Plataforma plataforma;
 
     private LocalDate lanzamiento;
