@@ -4,7 +4,6 @@ import com.Tienda.gamer.dto.request.JuegoConIdRequestDto;
 import com.Tienda.gamer.dto.request.JuegoRequestDto;
 import com.Tienda.gamer.dto.response.JuegoResponseDto;
 import com.Tienda.gamer.dto.response.MensajeResponseDto;
-import com.Tienda.gamer.entity.Juego;
 
 import java.util.List;
 
