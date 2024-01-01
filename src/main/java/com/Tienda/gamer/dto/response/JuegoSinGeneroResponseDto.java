@@ -1,9 +1,6 @@
 package com.Tienda.gamer.dto.response;
 
 import com.Tienda.gamer.entity.Genero;
-import com.Tienda.gamer.entity.Plataforma;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,15 +11,13 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class JuegoResponseDto {
+public class JuegoSinGeneroResponseDto {
 
     private Long idJuego;
 
     private String titulo;
 
     private PlataformaResponseDto plataforma;
-
-    private GeneroResponseDto genero;
 
     private LocalDate lanzamiento;
 

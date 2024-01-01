@@ -15,6 +15,8 @@ public interface IJuegoRepository extends JpaRepository<Juego,Long> {
 
     Juego findByTituloAndPlataforma(String titulo, Plataforma plataforma);
 
+    //List<Juego> findByGenero(String genero);
+
     List<Juego> findByLanzamiento(LocalDate date);
 
     Juego findByStock(Integer stock);

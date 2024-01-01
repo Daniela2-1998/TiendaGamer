@@ -77,7 +77,7 @@ public class ClienteServiceImp implements IClienteService{
     @Override
     public ClienteResponseDto editarCliente(ClienteConIdRequestDto clienteConIdRequestDto) {
         Cliente cliente = clienteRepository.findByDni(clienteConIdRequestDto.getDni());
-        if(cliente != null && cliente.getIdCliente() != clienteConIdRequestDto.getIdCliente()){
+        if(cliente != null && cliente.getDni() != clienteConIdRequestDto.getDni()){
             throw new EntityAlreadyExistException("Ya hay otro cliente registrado con ese DNI.");
         }
         cliente = clienteRepository.findByMail(clienteConIdRequestDto.getMail());

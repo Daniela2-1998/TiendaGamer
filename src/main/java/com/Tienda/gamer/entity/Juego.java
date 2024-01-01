@@ -22,8 +22,10 @@ public class Juego {
     private String titulo;
 
     @ManyToOne
-    //@JoinColumn(name = "plataforma_id")
     private Plataforma plataforma;
+
+    @ManyToOne
+    private Genero genero;
 
     private LocalDate lanzamiento;
 
